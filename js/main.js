@@ -9,8 +9,8 @@ $(function(){
 		fit:true,
 		tabHeight:80,
 		tabWidth:120,
-		border:true,
-		selected:3
+		border:false
+		// selected:3
 	});
 
 });
