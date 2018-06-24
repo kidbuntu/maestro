@@ -8,14 +8,15 @@ $(function(){
 	$(".tab").tabs({
 		fit:true,
 		tabHeight:80,
-		tabWidth:120,
+		tabWidth:135,
 		border:false,
-		selected:0
+		selected:5
+		// plain:true
 	});
 
 	$(".subtab").tabs({
 		fit:true,
-		border:false,
+		border:true,
 		plain:true
 	});
 

@@ -4,7 +4,11 @@
 	<meta charset="UTF-8">
 	<title>POS AND INVENTORY</title>
 	<link rel="icon" type="text/css" href="images/maestro.png" sizes="">    
-	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+	<!-- <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css"> -->
+	<link rel="stylesheet" type="text/css" href="easyui/themes/bootstrap/easyui.css">
+	<link rel="stylesheet" type="text/css" href="easyui/themes/bootstrap/tabs.css">
+	<!-- <link rel="stylesheet" type="text/css" href="easyui/themes/bootstrap/datagrid.css"> -->
+
 	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="easyui/themes/color.css">
 	<link rel="stylesheet" type="text/css" href="easyui/demo/demo.css">
@@ -21,7 +25,8 @@
 	<script type="text/javascript" src="js/users_tab.js"></script>
 	<script type="text/javascript" src="js/dashboard_tab.js"></script>	
 	<script type="text/javascript" src="js/pos_tab.js"></script>	
-	
+	<script type="text/javascript" src="js/reports_tab.js"></script>
+	<script type="text/javascript" src="js/transactions_tab.js"></script>
 
 <style scoped="scoped">
 body{
@@ -107,7 +112,7 @@ border:0;
 			<div title="<span class='tt-inner'><img src='images/pos.png'/><br>POS</span>" style="padding:5px;">
 				<div class="container">
 					<div data-options="region:'west',split:true,title:'Menu',collapsible:false" style="width: 60%;">
-						<div class="subtab" justified="true">
+						<div class="subtab" justified="true" style="padding: 5px;">
 							<div title="Ice Blended"></div>
 							<div title="Over Ice"></div>
 							<div title="Hot"></div>
@@ -115,10 +120,30 @@ border:0;
 						</div>
 					</div>
 					<div data-options="region:'center',title:'Cart'">
-						<table id="dgcart"></table>
-						<div id="tbcart" style="padding:3px;">
-							<h4>Total:</h4>
+						<div class="container">
+							<table id="dgcart"></table>
+							<div id="tbcart" style="padding:3px;">
+								<div style="float: left;">
+									<h4>Total Amount Due:</h4>
+								</div>
+								<div style="margin:10px; float: right;">
+									<input id="nb_pay" type="text">
+								</div>
+							</div>
 						</div>
+						
+					</div>
+				</div>
+			</div>
+
+			<!-- transactions -->
+			<div title="<span class='tt-inner'><img src='images/transactions.png'/><br>TRANSACTION</span>" style="padding: 5px;">
+				<div class="subtab">
+					<div title="Current" style="padding: 5px;">
+						<table id="dgcurrent"></table>
+					</div>
+					<div title="Previous" style="padding: 5px;">
+						<table id="dgprevious"></table>
 					</div>
 				</div>
 			</div>
@@ -128,7 +153,21 @@ border:0;
 			<div class="gen-pads" title="<span class='tt-inner'><img src='images/users.png'/><br>USERS</span>">
 				<table id="dg_users"></table>
 			</div>
-			<div title="<span class='tt-inner'><img src='images/reports.png'/><br>REPORTS</span>"></div>
+
+			<!-- reports -->
+			<div title="<span class='tt-inner'><img src='images/reports.png'/><br>REPORTS</span>" style="padding: 5px;">
+				<table id="dgreports"></table>
+				<div id="tbreports">
+					Date From: <input class="easyui-datebox" style="width:110px">
+                    To: <input class="easyui-datebox" style="width:110px">
+                    Type of Report: 
+                    <select class="easyui-combobox" panelHeight="auto" style="width:150px">
+                    </select>
+
+                    <a class="easyui-linkbutton" iconCls="icon-search">Search</a>
+                    <a class="easyui-linkbutton" iconCls="icon-redo">Export</a>
+				</div>
+			</div>
 			<div title="<span class='tt-inner'><img src='images/products.png'/><br>PRODUCTS</span>"></div>	
 		</div>
 	</div>

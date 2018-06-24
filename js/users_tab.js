@@ -8,6 +8,16 @@ $(function(){
 			{field:'firstname',title:'First Name',width:100},
 			{field:'lastname',title:'Last Name',width:100}
 		]],
-		fitColumns:true
+		fitColumns:true,
+		toolbar:[{
+			iconCls:'icon-add',
+			text:'Add'
+		},"-",{
+			iconCls:'icon-edit',
+			text:'Edit'
+		},"-",{
+			iconCls:'icon-remove',
+			text:'Remove'
+		}]
 	});
 });

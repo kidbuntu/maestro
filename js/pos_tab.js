@@ -13,16 +13,23 @@ $(function(){
 		toolbar:[{
 			iconCls:'icon-print',
 			text:'Receipt'
-		},{
+		},"-",{
 			iconCls:'icon-edit',
 			text:'Discount'
-		},{
+		},"-",{
 			iconCls:'icon-no',
 			text:'Void Item'
-		},{
+		},"-",{
 			iconCls:'icon-cancel',
 			text:'Cancel'
 		}],
 		footer:'#tbcart'
+	});
+
+	$("#nb_pay").numberbox({
+		buttonText:'PAY',
+		buttonIcon:'icon-ok',
+		width:300,
+		prompt:'Enter Payment Amount Here'
 	});
 });
