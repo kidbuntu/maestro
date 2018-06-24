@@ -9,8 +9,14 @@ $(function(){
 		fit:true,
 		tabHeight:80,
 		tabWidth:120,
-		border:false
-		// selected:3
+		border:false,
+		selected:1
+	});
+
+	$(".subtab").tabs({
+		fit:true,
+		border:false,
+		plain:true
 	});
 
 });

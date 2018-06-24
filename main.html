@@ -16,9 +16,12 @@
 
 	<script type="text/javascript" src="js/Chart.bundle.min.js"></script>	
 	
+
+	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/users_tab.js"></script>
 	<script type="text/javascript" src="js/dashboard_tab.js"></script>	
-	<script type="text/javascript" src="js/main.js"></script>	
+	<script type="text/javascript" src="js/pos_tab.js"></script>	
+	
 
 <style scoped="scoped">
 body{
@@ -44,6 +47,8 @@ border:0;
 
 	<div data-options="region:'center',border:false">
 		<div class="tab">
+
+			<!-- dashboard -->
 			<div title="<span class='tt-inner'><img src='images/dashboard.png'/><br>DASHBOARD</span>">
 				<div class="container">
 					<div data-options="region:'west', border:false" style="width: 50%;">
@@ -57,8 +62,26 @@ border:0;
 						</div>
 					</div>
 				</div>
-			</div>	
-			<div title="<span class='tt-inner'><img src='images/pos.png'/><br>POS</span>"></div>
+			</div>
+
+			<!-- point of sale	 -->
+			<div title="<span class='tt-inner'><img src='images/pos.png'/><br>POS</span>" style="padding:5px;">
+				<div class="container">
+					<div data-options="region:'west',split:true,title:'Menu',collapsible:false" style="width: 60%;">
+						<div class="subtab">
+							<div title="Ice Blended"></div>
+							<div title="Over Ice"></div>
+							<div title="Hot"></div>
+							<div title="Food"></div>
+						</div>
+					</div>
+					<div data-options="region:'center',title:'Cart'">
+						<table id="dgcart"></table>
+					</div>
+				</div>
+			</div>
+
+			<!-- inventory -->
 			<div title="<span class='tt-inner'><img src='images/inventory.png'/><br>INVENTORY</span>"></div>
 			<div class="gen-pads" title="<span class='tt-inner'><img src='images/users.png'/><br>USERS</span>">
 				<table id="dg_users"></table>
