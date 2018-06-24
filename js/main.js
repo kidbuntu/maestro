@@ -10,7 +10,7 @@ $(function(){
 		tabHeight:80,
 		tabWidth:120,
 		border:false,
-		selected:1
+		selected:0
 	});
 
 	$(".subtab").tabs({

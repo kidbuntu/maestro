@@ -82,4 +82,31 @@ var myChart2 = new Chart(ctx2, {
     }
 });
 
+// SALES
+$('.slstb').numberbox({
+    labelWidth:120,
+    labelAlign:'left'
+});
+
+$('#tb_sold').numberbox({
+    label:'Sales Count:'
+});
+
+$('#tb_void').numberbox({
+    label:'Void Count:'
+});
+
+$('#tb_discount').numberbox({
+    label:'Total Discount:'
+});
+
+$('#tb_sales').numberbox({
+    label:'Total Sales:'
+});
+
+// INVENTORY
+$('#tb_crit').numberbox({
+    label:'Critical Count:'
+});
+
 });

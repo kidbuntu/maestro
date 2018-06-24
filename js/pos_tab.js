@@ -22,6 +22,7 @@ $(function(){
 		},{
 			iconCls:'icon-cancel',
 			text:'Cancel'
-		}]
+		}],
+		footer:'#tbcart'
 	});
 });
